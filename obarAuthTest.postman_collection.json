@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "25d7fac5-a90f-4f9c-8d28-ad5cdd641aea",
+		"name": "obarAuthTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28801323"
+	},
+	"item": [
+		{
+			"name": "checkRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\":\"09124836852\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/user/userApi/checkRegistration/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user",
+						"userApi",
+						"checkRegistration",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "checkRegistration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\":\"09124836852\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/user/userApi/checkRegistration/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"user",
+								"userApi",
+								"checkRegistration",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 19:23:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"کد تایید ارسال شد.\",\n    \"code\": \"64826\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verifyCode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\":\"09124836852\",\r\n    \"code\":\"64826\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/user/userApi/verifyCode/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user",
+						"userApi",
+						"verifyCode",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "verifyCode",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\":\"09124836852\",\r\n    \"code\":\"64826\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/user/userApi/verifyCode/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"user",
+								"userApi",
+								"verifyCode",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 19:23:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ثبت نام با موفقیت انجام شد\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJuYW1lIjpudWxsLCJwaG9uZU51bWJlciI6IjA5MTI0ODM2ODUyIiwibGFzdE5hbWUiOm51bGwsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3NDU5NTQ2MTcuMDYwNzI0LCJpYXQiOjE3NDUwOTA2MTcuMDYwNzI0LCJqdGkiOiI0MzA0Yjg5NDQ0ZjQ0OGIzYTM0YjRhMTEyYzg3NmQwZSJ9._6-gnvi7IHuzToQCxAu9_wKGdUrG_TY5GV5N0DwzQDs\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJuYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicGhvbmVOdW1iZXIiOiIwOTEyNDgzNjg1MiIsInRva2VuX3R5cGUiOiJyZWZyZXNoIiwiZXhwIjoxNzUwMjc0NjE3LjA5MjMwNiwiaWF0IjoxNzQ1MDkwNjE3LjA5MjMwNiwianRpIjoiNDMwNGI4OTQ0NGY0NDhiM2EzNGI0YTExMmM4NzZkMGUifQ.FCUxOLOZF5z1_wnEUqJ7ahrYWBicOKpu_yoCVzXs_AQ\",\n    \"user_id\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "completeRegistration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJuYW1lIjpudWxsLCJwaG9uZU51bWJlciI6IjA5MTI0ODM2ODUyIiwibGFzdE5hbWUiOm51bGwsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3NDU5NTQ2MTcuMDYwNzI0LCJpYXQiOjE3NDUwOTA2MTcuMDYwNzI0LCJqdGkiOiI0MzA0Yjg5NDQ0ZjQ0OGIzYTM0YjRhMTEyYzg3NmQwZSJ9._6-gnvi7IHuzToQCxAu9_wKGdUrG_TY5GV5N0DwzQDs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"reza\",\r\n  \"lastName\": \"ashary\",\r\n  \"email\": \"rezaashary8@gmail.com\",\r\n  \"password\": \"12345678r\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/user/userApi/completeRegistration/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user",
+						"userApi",
+						"completeRegistration",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "completeRegistration",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"reza\",\r\n  \"lastName\": \"ashary\",\r\n  \"email\": \"rezaashary8@gmail.com\",\r\n  \"password\": \"12345678r\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/user/userApi/completeRegistration/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"user",
+								"userApi",
+								"completeRegistration",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 19:25:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"اطلاعات با موفقیت بروزرسانی شد.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\":\"09124836852\",\r\n    \"password\":\"12345678r\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/user/userApi/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user",
+						"userApi",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\":\"09124836852\",\r\n    \"password\":\"12345678r\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/user/userApi/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"user",
+								"userApi",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 19:26:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ورود با موفقیت انجام شد\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJuYW1lIjoicmV6YSIsInBob25lTnVtYmVyIjoiMDkxMjQ4MzY4NTIiLCJsYXN0TmFtZSI6ImFzaGFyeSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3NDU5NTQ4MDYuODk2MTY2LCJpYXQiOjE3NDUwOTA4MDYuODk2MTY2LCJqdGkiOiI0MzA0Yjg5NDQ0ZjQ0OGIzYTM0YjRhMTEyYzg3NmQwZSJ9.cIOa_jXo7x4zaCBuSxQ_3ssLrtl3fy1vKGqeWGCL--8\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJuYW1lIjoicmV6YSIsImxhc3ROYW1lIjoiYXNoYXJ5IiwicGhvbmVOdW1iZXIiOiIwOTEyNDgzNjg1MiIsInRva2VuX3R5cGUiOiJyZWZyZXNoIiwiZXhwIjoxNzUwMjc0ODA2Ljg5NjE2NiwiaWF0IjoxNzQ1MDkwODA2Ljg5NjE2NiwianRpIjoiNDMwNGI4OTQ0NGY0NDhiM2EzNGI0YTExMmM4NzZkMGUifQ.1GoGXIVOFo5D09PQMMn75W2rEfij6_dZrTPuQ-HWcbY\",\n    \"user_id\": 7\n}"
+				}
+			]
+		}
+	]
+}

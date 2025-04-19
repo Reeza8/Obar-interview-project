@@ -16,6 +16,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
+BAN_TIME_HOURS = int(os.getenv('BAN_TIME_HOURS', '1'))
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,12 +29,14 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-    # 'EXCEPTION_HANDLER': 'common.utils.exception.custom_exception_handler',
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
+    'EXCEPTION_HANDLER': 'common.utils.custom_exception_handler',
 }
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,7 +45,7 @@ REST_FRAMEWORK = {
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
